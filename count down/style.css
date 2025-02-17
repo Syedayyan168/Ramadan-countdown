@@ -1,0 +1,254 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #04463a;
+    color: white;
+    padding: 20px;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    animation: fadeIn 1s ease-in-out;
+    background-image: url(../assets/img1.png);
+    animation: backgroundAnimation 10s infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-size: 100%;
+    }
+    100% {
+        background-size: 110%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 32px;
+    animation: slideInDown 1s ease-in-out;
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.buttons {
+    margin: 20px;
+    transition: opacity 0.5s ease-in-out;
+    animation: fadeIn 1.5s ease-in-out;
+}
+button {
+    padding: 12px 20px;
+    margin: 5px;
+    font-size: 18px;
+    background: linear-gradient(45deg, #ff9800, #ff3b3b);
+    background-size: 200% 200%;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    animation: gradientAnimation 3s ease infinite, bounceIn 1s ease-in-out;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+button:hover {
+    background-color: #e68900;
+    transform: scale(1.1);
+}
+
+
+button:hover {
+    background-color: #e68900;
+    transform: scale(1.1);
+}
+
+#clearButton {
+    background-color: #ff3b3b;
+    display: none; 
+}
+
+#clearButton:hover {
+    background-color: #d82a2a;
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+}
+
+.countdown.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.countdown.hide {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.time-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 5px;
+    min-width: 80px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.time {
+    font-size: 40px;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.label {
+    font-size: 14px;
+    color: #bbb;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.separator {
+    font-size: 40px;
+    margin: 0 5px;
+    color: #ff9800;
+    animation: flash 1.5s infinite;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    button {
+        padding: 10px 16px;
+        font-size: 16px;
+    }
+
+    .countdown {
+        font-size: 24px;
+    }
+
+    .time-box {
+        padding: 15px;
+        min-width: 60px;
+    }
+
+    .time {
+        font-size: 32px;
+    }
+
+    .separator {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .countdown {
+        font-size: 20px;
+    }
+
+    .time-box {
+        padding: 10px;
+        min-width: 50px;
+    }
+
+    .time {
+        font-size: 28px;
+    }
+
+    .separator {
+        font-size: 28px;
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramadan Countdown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>🌙 Ramadan Countdown</h1>
+
+    <div class="buttons" id="buttonContainer">
+        <button onclick="startCountdown('2025-02-28')">28 February</button>
+        <button onclick="startCountdown('2025-03-01')">1 March</button>
+    </div>
+
+    <button id="clearButton" onclick="clearCountdown()" style="display: none;">Clear</button>
+
+    <div class="countdown-container">
+        <div class="countdown" id="countdownContainer">
+            <div class="time-box">
+                <div class="time" id="days">00</div>
+                <div class="label">DAYS</div>
+            </div>
+            <span class="separator">:</span>
+            <div class="time-box">
+                <div class="time" id="hours">00</div>
+                <div class="label">HOURS</div>
+            </div>
+            <span class="separator">:</span>
+            <div class="time-box">
+                <div class="time" id="minutes">00</div>
+                <div class="label">MINUTES</div>
+            </div>
+            <span class="separator">:</span>
+            <div class="time-box">
+                <div class="time" id="seconds">00</div>
+                <div class="label">SECONDS</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
